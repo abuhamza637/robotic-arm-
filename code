@@ -1,0 +1,35 @@
+#include <Servo.h>  
+Servo myservodown;  // create servo object to control a servo 
+Servo myservoclip;
+Servo myservorot;// a maximum of eight servo objects can be created 
+ int pos = 0;    // variable to store the servo position 
+ void setup() 
+{ 
+myservodown.attach(9);
+myservoclip.attach(11);
+myservorot.attach(10);// attaches the servo on pin 9 to the servo object 
+} 
+ void loop() 
+{   myservodown.write(0);              // tell servo to go to position in variable 'pos' 
+delay(15);   delay(2000);
+myservoclip.write(90);
+delay(15);  delay(2000);  // waits 15ms for the servo to reach the position 
+myservodown.write(150);              // tell servo to go to position in variable 'pos' 
+delay(15);   delay(2000);
+myservoclip.write(0);
+delay(15);delay(1000);
+myservoclip.write(0);
+delay(15);delay(1000);
+myservodown.write(0);
+delay(15);delay(2000);
+myservorot.write(0);
+delay(15);delay(2000);
+myservodown.write(150);
+delay(15);delay(2000);
+myservoclip.write(90);
+delay(15);delay(2000);
+myservodown.write(0);
+delay(15);delay(2000);
+myservorot.write(120);
+delay(2000);
+}
